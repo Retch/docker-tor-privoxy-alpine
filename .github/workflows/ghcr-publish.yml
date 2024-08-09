@@ -43,5 +43,5 @@ jobs:
           file: ./Dockerfile
           context: .
           push: true
-          tags: ${{ steps.ownerrepo.outputs.lowercase }}:latest
+          tags: ${{ env.REGISTRY }}/${{ steps.ownerrepo.outputs.lowercase }}:latest
           platforms: linux/amd64,linux/arm64,linux/arm
