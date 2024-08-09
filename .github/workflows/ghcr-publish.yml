@@ -43,5 +43,5 @@ jobs:
           file: ./Dockerfile
           context: .
           push: true
-          tags: ${{ github.repository }}:latest
+          tags: ${{ steps.ownerrepo.outputs.lowercase }}:latest
           platforms: linux/amd64,linux/arm64,linux/arm
